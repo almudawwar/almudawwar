@@ -34,11 +34,42 @@
     position: absolute;
     backdrop-filter: blur(5px) saturate(1.7);
     background: hsla(293, 43%, 12%, 0.71);
+    box-shadow: #FCAF58 0px 0px 30px 0px;
+    animation: shine 1s linear infinite;
+    animation-direction: alternate;
+  }
+
+  
+  .fade {
+    animation: fadeout 0.5s linear 0s 1 forwards normal;
+    position: absolute;
   }
 }
 
 @keyframes scroll {
   100% {
     background-position: 0px -400%;
+  }
+}
+
+@keyframes shine {
+  100% {
+    box-shadow: #FCAF58 0px 0px 30px 20px;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+  
+  100% {
+    opacity: 0;
+    display: none;
+    top: -100%;
   }
 }
